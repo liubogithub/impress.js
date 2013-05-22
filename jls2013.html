@@ -51,11 +51,11 @@
     <div id="title" class="step" data-x="0" data-y="0" data-scale="10">
         <div id="title-text">
 		Btrfs Specific Dedup
-		<p></p>
+		<p><br>
 		Liu Bo
 	</div>
 	<div id="title-logo">
-		<img src="logo-oracle.jpg">
+		<img src="ironman_oracle.jpg">
 	</div>
     </div>
 
@@ -71,6 +71,7 @@
 	<div id="explain-title">
 	<b>Dedup</b><br>
 	</div>
+	<p><br>
 	<div id="explain-text">
 		- A specialized compression technique<br>
 		- Elimate duplicate copies<br>
@@ -90,7 +91,7 @@
     </div>
 
     <div id="compress-exist" class="step" data-x="14000" data-y="-150" data-scale=".5">
-	But We Already Have <b>Compression</b>!
+	But We Already Have <b>Compression</b>?
     </div>
 
     <div id="answer" class="step" data-x="14500" data-y="0" data-scale=".5" data-rotate="90">
@@ -101,6 +102,7 @@
 	<b>Btrfs</b><br>
 	<div id="smaller-txt">
 	- Cow B+tree<br>
+	- Extent based file storage<br>
 	- 2^64 byte == 16 EiB maximum file size<br>
 	- Dynamic inode allocation<br>
 	- Checksum on both data and metadata<br>
@@ -191,21 +193,45 @@
     <div id="dedup-limit" class="step" data-x="2200" data-y="9500" data-scale="1" data-rotate="210">
 	<b>Limit</b><br>
 	<div id="smaller-txt">
-	- Effective on backup, virtualization<br>
-	- Ineffective on structured data
+	Effective on<br>
+	   <div id="smaller-txt">
+		- Backups<br>
+		- Virtual Machines<br>
+       		- Network shares for unstructured data such as office documents and PSTs<br>
+       		- Any application with a large amount of deduplicated data<br>
+	   </div>
+	<p><br>
+	NOT effective on structured data, like Pictures, Music Files, Movies/Videos,
+        Encrypted Data
 	</div>
     </div>
 
-    <div id="dedup-perf" class="step" data-x="1800" data-y="8500" data-scale="2" data-rotate="210">
+    <div id="dedup-perf-1" class="step" data-x="1000" data-y="10500" data-scale="0.5" data-rotate="210">
 	<b>Performance</b><br>
 	<p><br>
-	default: xxx<br>
-	dedup: xxx<br>
-	dedup+compress: xxx<br>
+	<img src="dedup-perf-1.png">
+    </div>
+
+    <div id="dedup-perf-2" class="step" data-x="500" data-y="11500" data-scale="0.5" data-rotate="210">
+	<b>Performance, cont</b><br>
+	<p><br>
+	<img src="dedup-perf-2.png">
     </div>
 
     <div id="dedup-demo" class="step" data-x="300" data-y="6000" data-scale="4" data-rotate="210">
 	<b>DEMO</b>
+    </div>
+
+    <div id="dedup-demo-graph-1" class="step" data-x="1800" data-y="6000" data-scale="0.5" data-rotate="210">
+	<div id="dedup-demo-graph">
+	    <img src="orig.png">
+	</div>
+    </div>
+
+    <div id="dedup-demo-graph-2" class="step" data-x="1000" data-y="5500" data-scale="0.5" data-rotate="210">
+	<div id="dedup-demo-graph">
+	    <img src="dedup-4k.png">
+	</div>
     </div>
 
     <div id="dedup-issue" class="step" data-x="-1500" data-y="5000" data-scale="2" data-rotate="210">
@@ -223,12 +249,13 @@
 	<b>Reference</b><br>
 	<p><br>
 	<div id="ref-txt">
-	- http://en.wikipedia.org/wiki/Data_deduplication<br>
-	- http://media.netapp.com/documents/tr-3505.pdf<br>
-	- http://www.druva.com/blog/2009/01/09/understanding-data-deduplication<br>
-	- https://btrfs.wiki.kernel.org/index.php/Main_Page<br>
-	- https://communities.netapp.com/community/netapp-blogs/drdedupe/blog/2010/04/07/how-netapp-deduplication-works--a-primer<br>
-	- http://en.wikipedia.org/wiki/Fingerprint_%28computing%29<br>
+	- <a href=http://en.wikipedia.org/wiki/Data_deduplication>http://en.wikipedia.org/wiki/Data_deduplication</a><br>
+	- <a href=http://media.netapp.com/documents/tr-3505.pdf>http://media.netapp.com/documents/tr-3505.pdf</a><br>
+	- <a href=http://www.druva.com/blog/2009/01/09/understanding-data-deduplication>http://www.druva.com/blog/2009/01/09/understanding-data-deduplication</a><br>
+	- <a href=https://btrfs.wiki.kernel.org/index.php/Main_Page>https://btrfs.wiki.kernel.org/index.php/Main_Page</a><br>
+	- <a href=https://communities.netapp.com/community/netapp-blogs/drdedupe/blog/2010/04/07/how-netapp-deduplication-works--a-primer>https://communities.netapp.com/community/netapp-blogs/drdedupe/blog/2010/04/07/how-netapp-deduplication-works--a-primer</a><br>
+	- <a href=http://en.wikipedia.org/wiki/Fingerprint_%28computing%29>http://en.wikipedia.org/wiki/Fingerprint_%28computing%29</a><br>
+	- <a href=https://btrfs.wiki.kernel.org>https://btrfs.wiki.kernel.org</a>
 	</div>
     </div>
 
