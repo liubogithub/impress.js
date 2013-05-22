@@ -253,8 +253,8 @@ a:focus {
 #title-text {
     font-size: 64px;
     position: absolute;
-    top: 0px;
-    left: 20%;
+    top: -2em;
+    left: 10%;
     text-shadow: -1px -1px 2px rgba(100,100,100,0.9);
 }
 
@@ -264,19 +264,25 @@ a:focus {
     left: 70%;
 }
 
-#why-dedup p {
+#why-dedup {
     font-size: 55px;
 }
 
-#whats-dedup p {
+#whats-dedup {
     font-size: 55px;
+}
+
+#explain-title {
+    position: absolute;
+    left: 25%;
+    top: -3em;
 }
 
 #explain-text {
     font-size: 70%;
     position: absolute;
     left: 25%;
-    top: 0;
+    top: -2em;
 }
 
 #explain-pic img {
@@ -287,15 +293,17 @@ a:focus {
 }
 
 #dedup-process img {
-	width: 120%;
+    position: absolute;
+    width: 120%;
+    left: -2em;
+    top: -6em;
 }
 
 #dedup-classify img {
-	width: 120%;
-}
-
-#btrfs-intro p {
-    font-size: 55px;
+    position: absolute;
+    width: 110%;
+    left: -1em;
+    top: -6.5em;
 }
 
 #backref b {
@@ -331,11 +339,21 @@ a:focus {
 
 #dedup-key img {
     position: absolute;
-    top: -9.5em;
+    top: -8.2em;
+    width: 80%;
 }
 
-#dedup-ctrl-txt {
+#dedup-explicit img {
+    position: absolute;
+    top: -8.8em;
+}
+
+#smaller-txt {
     font-size: 80%;
+}
+
+#ref-txt {
+    font-size: 60%;
 }
 
 #title {

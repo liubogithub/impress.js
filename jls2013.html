@@ -60,16 +60,18 @@
     </div>
 
     <div id="why-dedup" class="step" data-x="13000" data-y="0" data-scale="8">
-	<p>Why btrfs needs <b>dedup</b>?</p>
+	Why btrfs needs <b>dedup</b>?
     </div>
 
     <div id="whats-dedup" class="step" data-x="13500" data-y="-150" data-scale=".5">
-	<p>What is <b>dedup</b>?</p>
+	What is <b>dedup</b>?
     </div>
 
     <div id="dedup-explain" class="step" data-x="13550" data-y="-150" data-scale=".05" data-rotate="90">
+	<div id="explain-title">
+	<b>Dedup</b><br>
+	</div>
 	<div id="explain-text">
-		<b>Dedup</b><br>
 		- A specialized compression technique<br>
 		- Elimate duplicate copies<br>
 		- Improve storage utilization
@@ -92,21 +94,28 @@
     </div>
 
     <div id="answer" class="step" data-x="14500" data-y="0" data-scale=".5" data-rotate="90">
-	A good FS for backup!
+	A Good FS For Backup!
     </div>
 
     <div id="btrfs-intro" class="step" data-x="18500" data-y="5000" data-scale="8" data-rotate="180">
 	<b>Btrfs</b><br>
-	- cow B+tree<br>
-	- subvolume<br>
-	- send/receive<br>
-	- etc
+	<div id="smaller-txt">
+	- Cow B+tree<br>
+	- 2^64 byte == 16 EiB maximum file size<br>
+	- Dynamic inode allocation<br>
+	- Checksum on both data and metadata<br>
+	- Compression<br>
+	- Integrated multiple device support<br>
+	- Subvolume, writable/readonly snapshot<br>
+	- Send/receive<br>
+	- Etc
+	</div>
     </div>
 
     <div id="btrfs-dedup" class="step" data-x="10500" data-y="6000" data-scale="6" data-rotate="90">
 	<b>Btrfs Deduplication</b><br>
-	- inline<br>
-	- block level
+	- Inline<br>
+	- Block level
     </div>
 
     <div id="dedup-overall" class="step" data-x="8000" data-y="7000" data-scale="2" data-rotate="180">
@@ -124,8 +133,9 @@
 
     <div id="hash-generate" class="step" data-x="7350" data-y="8850" data-scale=".05" data-rotate="90">
 	<div id="hashgen-text">
-		- <b>fingerprint</b><br>
-		- <b>hash algorithm:</b><br> crc32c vs sha256
+		- <b>Fingerprint</b><br>
+		<p><br>
+		- <b>Hash algorithm:</b><br> crc32c vs sha256
 	</div>
 	<img src="Fingerprint.png">
     </div>
@@ -136,7 +146,8 @@
 
     <div id="hash-search" class="step" data-x="7125" data-y="8840" data-scale=".05" data-rotate="90">
 	<b>B+tree</b>:  dedup tree<br>
-	<b>keys</b>:  dedup keys
+	<p><br>
+	<b>Keys</b>:  dedup keys
     </div>
 
     <div id="dedup-key" class="step" data-x="7123" data-y="8865" data-scale=".04" data-rotate="90">
@@ -149,16 +160,18 @@
 
     <div id="async" class="step" data-x="4700" data-y="10100" data-scale="1" data-rotate="120">
 	<b>Dedup Engine</b><br>
-	- dedup is a filter of IO as compression<br>
-	- take a bunch of locked pages to process<br>
-	- asynchronous helper thread, aim to work across all online processors
+	<div id="smaller-txt">
+	- Dedup is a filter of IO as compression<br>
+	- Take a bunch of locked pages to process<br>
+	- Asynchronous helper thread, aim to work across all online processors
+	</div>
     </div>
 
     <div id="dedup-control" class="step" data-x="3800" data-y="10100" data-scale="1" data-rotate="150">
 	<b>Flexible Control</b><br>
-	<div id="dedup-ctrl-txt">
-	- register (create the dedup tree)<br>
-	- unregister (delete the out-of-date dedup tree)<br>
+	<div id="smaller-txt">
+	- Register (create the dedup tree)<br>
+	- Unregister (delete the out-of-date dedup tree)<br>
 	- "-o dedup"<br>
 	- "-o dedup_bs=xxx", eg. 4k, 128k<br>
 	</div>
@@ -166,21 +179,26 @@
 
     <div id="dedup-conclusion" class="step" data-x="2900" data-y="10100" data-z="-100" data-rotate-x="50" data-rotate-y="-10" data-scale="1" data-rotate="180">
 	<b>Conclusion</b><br>
-	- transparent dedup<br>
-	- synchronous, block level<br>
-	- compress support<br>
-	- tunable granularity, ie. dedup blocksize<br>
-	- not default, easy to control<br>
+	<div id="smaller-txt">
+	- Transparent dedup<br>
+	- Synchronous, block level<br>
+	- Compression support<br>
+	- Tunable granularity, ie. dedup blocksize<br>
+	- Not default, easy to control<br>
+	</div>
     </div>
 
     <div id="dedup-limit" class="step" data-x="2200" data-y="9500" data-scale="1" data-rotate="210">
 	<b>Limit</b><br>
-	effective on backup, virtualization
-	ineffective on structured data
+	<div id="smaller-txt">
+	- Effective on backup, virtualization<br>
+	- Ineffective on structured data
+	</div>
     </div>
 
     <div id="dedup-perf" class="step" data-x="1800" data-y="8500" data-scale="2" data-rotate="210">
 	<b>Performance</b><br>
+	<p><br>
 	default: xxx<br>
 	dedup: xxx<br>
 	dedup+compress: xxx<br>
@@ -190,20 +208,35 @@
 	<b>DEMO</b>
     </div>
 
-    <div id="dedup-QA" class="step" data-x="-1500" data-y="5000" data-scale="6" data-rotate="0">
+    <div id="dedup-issue" class="step" data-x="-1500" data-y="5000" data-scale="2" data-rotate="210">
+	<b>Known Issues</b><br>
+	<p><br>
+	- ENOSPC<br>
+	- A byte to byte comparison
+    </div>
+
+    <div id="dedup-QA" class="step" data-x="-3000" data-y="5000" data-scale="6" data-rotate="0">
 	<b>QA</b>
     </div>
 
     <div id="dedup-ref" class="step" data-x="-6000" data-y="5000" data-scale="1" data-rotate="90">
-	<b>Reference</b>
+	<b>Reference</b><br>
+	<p><br>
+	<div id="ref-txt">
+	- http://en.wikipedia.org/wiki/Data_deduplication<br>
+	- http://media.netapp.com/documents/tr-3505.pdf<br>
+	- http://www.druva.com/blog/2009/01/09/understanding-data-deduplication<br>
+	- https://btrfs.wiki.kernel.org/index.php/Main_Page<br>
+	- https://communities.netapp.com/community/netapp-blogs/drdedupe/blog/2010/04/07/how-netapp-deduplication-works--a-primer<br>
+	- http://en.wikipedia.org/wiki/Fingerprint_%28computing%29<br>
+	</div>
     </div>
 
     <div id="dedup-thanks" class="step" data-x="-6200" data-y="4500" data-scale="2" data-rotate-x="40" data-rotate-y="20" data-rotate="90">
-	<b>Thank you!</b>
-	<p>
-	Liu Bo
-	<p>
-	bo.li.liu@oracle.com
+	<b>Thank you!</b><br>
+	<p><br>
+	Liu Bo<br>
+	&ltbo.li.liu@oracle.com&gt
     </div>
 
     <!--
