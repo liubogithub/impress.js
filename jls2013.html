@@ -102,7 +102,7 @@
 	<b>Btrfs</b><br>
 	<div id="smaller-txt">
 	- Cow B+tree<br>
-	- Extent based file storage<br>
+	- Extent based filesystem<br>
 	- 2^64 byte == 16 EiB maximum file size<br>
 	- Dynamic inode allocation<br>
 	- Checksum on both data and metadata<br>
@@ -197,25 +197,29 @@
 	   <div id="smaller-txt">
 		- Backups<br>
 		- Virtual Machines<br>
-       		- Network shares for unstructured data such as office documents and PSTs<br>
-       		- Any application with a large amount of deduplicated data<br>
+       		- Network shares for unstructured data such as office documents<br>
+       		- Any application with a large amount of duplicated data<br>
 	   </div>
 	<p><br>
-	NOT effective on structured data, like Pictures, Music Files, Movies/Videos,
-        Encrypted Data
+	NOT effective on <div id="smaller-txt">structured data, like Pictures, Music Files, Movies/Videos,
+        Encrypted Data</div>
 	</div>
     </div>
 
     <div id="dedup-perf-1" class="step" data-x="1000" data-y="10500" data-scale="0.5" data-rotate="210">
+	<div id="dedup-perf">
 	<b>Performance</b><br>
 	<p><br>
 	<img src="dedup-perf-1.png">
+	</div>
     </div>
 
     <div id="dedup-perf-2" class="step" data-x="500" data-y="11500" data-scale="0.5" data-rotate="210">
+	<div id="dedup-perf">
 	<b>Performance, cont</b><br>
 	<p><br>
 	<img src="dedup-perf-2.png">
+	</div>
     </div>
 
     <div id="dedup-demo" class="step" data-x="300" data-y="6000" data-scale="4" data-rotate="210">
@@ -241,8 +245,14 @@
 	- A byte to byte comparison
     </div>
 
-    <div id="dedup-QA" class="step" data-x="-3000" data-y="5000" data-scale="6" data-rotate="0">
-	<b>QA</b>
+    <div id="dedup-QA" class="step" data-x="-3000" data-y="7000" data-scale="6" data-rotate="0">
+	<b>QA</b><br>
+	<p><br>
+	<div id="smaller-txt">
+	   - How safe my data is?<br>
+	   <p><br>
+	   - Doesn't deduplication fragment the data and therefore slow down my reads?
+	</div>
     </div>
 
     <div id="dedup-ref" class="step" data-x="-6000" data-y="5000" data-scale="1" data-rotate="90">

@@ -187,7 +187,7 @@ a:focus {
 */
 .impress-enabled .step {
     margin: 0;
-    opacity: 0.1;
+    opacity: 0.05;
 
     -webkit-transition: opacity 1s;
     -moz-transition:    opacity 1s;
@@ -254,14 +254,14 @@ a:focus {
     font-size: 64px;
     position: absolute;
     top: -3.5em;
-    left: -1em;
+    left: 0em;
     text-shadow: -1px -1px 2px rgba(100,100,100,0.9);
 }
 
 #title-logo img {
     position: absolute;
     top: -1em;
-    left: 50%;
+    left: 30%;
     width: 75%;
 }
 
@@ -275,29 +275,29 @@ a:focus {
 
 #explain-title {
     position: absolute;
-    left: 25%;
+    left: 37%;
     top: -2em;
 }
 
 #explain-text {
-    font-size: 70%;
+    font-size: 60%;
     position: absolute;
-    left: 25%;
+    left: 37%;
     top: 0em;
 }
 
 #explain-pic img {
     position: absolute;
     top: -3em;
-    left: -20%;
+    left: -6%;
     width: 40%;
 }
 
 #dedup-process img {
     position: absolute;
-    width: 120%;
-    left: -2em;
-    top: -6em;
+    width: 100%;
+    left: -0em;
+    top: -5em;
 }
 
 #dedup-classify img {
@@ -309,14 +309,15 @@ a:focus {
 
 #backref b {
     position: absolute;
-    left: -20%;
+    font-size: 70%;
+    left: -5%;
 }
 
 #backref img {
     position: absolute;
-    top: -350px;
+    top: -6em;
     left: 35%;
-    width: 90%;
+    width: 70%;
 }
 
 #dedup-graph img {
@@ -333,9 +334,9 @@ a:focus {
 
 #hash-generate img {
     position: absolute;
-    top: -3em;
-    left: -10%;
-    width: 60%;
+    top: -2em;
+    left: 0%;
+    width: 50%;
 }
 
 #dedup-key img {
@@ -351,6 +352,17 @@ a:focus {
 
 #smaller-txt {
     font-size: 80%;
+}
+
+#dedup-perf b {
+    position: absolute;
+    top: -4em;
+}
+
+#dedup-perf img {
+    position: absolute;
+    top: -1em;
+    left: -6.5%;
 }
 
 #ref-txt {
